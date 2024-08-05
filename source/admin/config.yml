@@ -31,7 +31,7 @@ collections:
       - label: "PY"
         name: "PY"
         file: "source/PY.md"
-        fileds: 
+        fields: 
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Intro", name: "intro", widget: "markdown"}
         
