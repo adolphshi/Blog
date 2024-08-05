@@ -1,0 +1,43 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server"
+  },
+  "hexo": {
+    "version": "7.3.0"
+  },
+  "dependencies": {
+    "@andatoshiki/markdown-it-katex": "^0.0.3",
+    "@upupming/hexo-renderer-markdown-it-plus": "^2.0.2",
+    "hexo": "^7.3.0",
+    "hexo-blog-encrypt": "^3.1.9",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-inferno": "^1.0.2",
+    "hexo-renderer-markdown-it": "^7.1.1",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "hexo-sliding-spoiler": "^1.2.1",
+    "hexo-tag-aplayer": "^3.0.4",
+    "hexo-theme-landscape": "^1.0.0",
+    "hexo-theme-nexmoe": "^4.2.2",
+    "hexo-wordcount": "^6.0.1",
+    "katex": "^0.16.11",
+    "markdown-it-checkbox": "^1.1.0",
+    "markdown-it-expandable": "^1.0.2",
+    "markdown-it-imsize": "^2.0.1",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-mark": "^4.0.0"
+  },
+  "devDependencies": {
+    "shiki": "^1.12.1"
+  }
+}
