@@ -25,4 +25,7 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Categories", name: "categories", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-  -label: ""
+  - label: "PY"
+    name: "PY"
+    file: "source/PY.md"
+    
