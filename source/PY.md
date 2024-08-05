@@ -1,4 +1,5 @@
 ---
-title: 朋友
+title: 朋友们
 layout: py
+intro: "# 朋友们"
 ---
