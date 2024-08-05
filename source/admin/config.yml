@@ -25,15 +25,20 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Categories", name: "categories", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - label: "PY"
-    name: "PY"
-    file: "source/PY.md"
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Intro, name: intro, widget: markdown}
-      - label: Locations
-        name: locations
-        widget: list
-        fields:
-          - {label: Name, name: name, widget: string}
-          - {label: Address, name: address, widget: string}
+  - label: "pages"
+    name: "pages"
+    files: 
+      - label: "PY"
+        name: "PY"
+        file: "source/PY.md"
+        fileds: 
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
+        
