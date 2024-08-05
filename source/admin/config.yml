@@ -32,6 +32,6 @@ collections:
         name: "PY"
         file: "source/PY.md"
         fileds: 
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Intro", name: "intro", widget: "markdown"}
         
