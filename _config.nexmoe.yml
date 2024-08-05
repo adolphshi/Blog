@@ -109,7 +109,7 @@ slotHead: |
 
     gtag("config", "G-4D4ZJ9G024");
   </script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="https://lib.baomitu.com/KaTeX/latest/katex.min.css">
 
 slotFooter: | 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
