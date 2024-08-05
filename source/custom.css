@@ -3,3 +3,12 @@
 {
 	background-color: #2b2b2b;
 }
+:root {
+    --color-primary: #31aeff;
+    --color2: #ff4e6a;
+    --color3: #ffb900;
+    --color4: #33d57a;
+    --color5: #00dbff;
+    --color6: #ff4500;
+    --color7: #9090ff;
+}
