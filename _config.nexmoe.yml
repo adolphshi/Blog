@@ -109,6 +109,7 @@ slotHead: |
 
     gtag("config", "G-4D4ZJ9G024");
   </script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <link rel="stylesheet" href="https://lib.baomitu.com/KaTeX/latest/katex.min.css">
 
 slotFooter: | 
@@ -127,6 +128,7 @@ slotComment: |
           el: '#vcomments',
           appId: '0TKbOGB3OwOCWPubA7YdNvLu-MdYXbMMI',
           appKey: 'swqtzVmF4SSqXULR2q2XIAFX'
+          visitor: true
       })
   </script>
 
@@ -134,3 +136,4 @@ slotCopyright: |
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
 slotArticleEnd:
+    
