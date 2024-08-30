@@ -127,7 +127,7 @@ slotComment: |
       new Valine({
           el: '#vcomments',
           appId: '0TKbOGB3OwOCWPubA7YdNvLu-MdYXbMMI',
-          appKey: 'swqtzVmF4SSqXULR2q2XIAFX'
+          appKey: 'swqtzVmF4SSqXULR2q2XIAFX',
           visitor: true
       })
   </script>
