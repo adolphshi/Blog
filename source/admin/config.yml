@@ -20,8 +20,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "cover", widget: "string",default: "https://cdn.luogu.com.cn/upload/image_hosting/imbnzgmv.png"}
-      - {label: "Width", name: "coverWidth", widget: "number",default: "1200"}
-      - {label: "Height", name: "coverHeight", widget: "number",default: "750"}
+      - {label: "Width", name: "coverWidth", widget: "number",default: "812"}
+      - {label: "Height", name: "coverHeight", widget: "number",default: "460"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Categories", name: "categories", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -34,4 +34,24 @@ collections:
         fields: 
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-        
+          
+    files: 
+      - label: "abmoume"
+        name: "aboutme"
+        file: "source/aboutme.md"
+        fields: 
+          - {label: "Featured Image", name: "cover", widget: "string",default: "https://cdn.luogu.com.cn/upload/image_hosting/imbnzgmv.png"}
+          - {label: "Width", name: "coverWidth", widget: "number",default: "812"}
+          - {label: "Height", name: "coverHeight", widget: "number",default: "460"}
+          - {label: "Publish Date", name: "date", widget: "datetime"}  
+          - {label: "Body", name: "body", widget: "markdown"}
+    files: 
+      - label: "donate"
+        name: "donate"
+        file: "source/donate.md"
+        fields: 
+          - {label: "Featured Image", name: "cover", widget: "string",default: "https://cdn.luogu.com.cn/upload/image_hosting/imbnzgmv.png"}
+          - {label: "Width", name: "coverWidth", widget: "number",default: "812"}
+          - {label: "Height", name: "coverHeight", widget: "number",default: "460"}
+          - {label: "Publish Date", name: "date", widget: "datetime"}  
+          - {label: "Body", name: "body", widget: "markdown"}
