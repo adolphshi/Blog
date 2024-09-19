@@ -1,6 +1,10 @@
 ---
 title: 关于本人
 layout: about
+cover: https://cdn.luogu.com.cn/upload/image_hosting/imbnzgmv.png
+coverWidth: 812
+coverHeight: 460
+date: 2024-09-19T19:07:00.000Z
 ---
 
 ## 自我介绍
