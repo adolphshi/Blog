@@ -34,8 +34,6 @@ collections:
         fields: 
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-          
-    files: 
       - label: "abmoume"
         name: "aboutme"
         file: "source/aboutme.md"
@@ -45,7 +43,6 @@ collections:
           - {label: "Height", name: "coverHeight", widget: "number",default: "460"}
           - {label: "Publish Date", name: "date", widget: "datetime"}  
           - {label: "Body", name: "body", widget: "markdown"}
-    files: 
       - label: "donate"
         name: "donate"
         file: "source/donate.md"
