@@ -38,6 +38,17 @@ intro: "# 朋友们"
  }
 ]
 {% endlinks %}
+## 虽然我们素未谋面
+现在还没有哦~
 
+如果你想互换友链直接评论就可以了,最好使用这个格式(~~方便复制~~):
+```
+{
+  "title": "adolphshi",
+  "link": "https://adolphshi.netlify.app/",
+  "img": "https://cdn.luogu.com.cn/upload/usericon/389924.png",
+  "des": "直面恐惧,创造未来"
+}
+```
 
-
+如果网站有变动请发消息
