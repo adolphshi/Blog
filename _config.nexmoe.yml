@@ -138,5 +138,5 @@ slotCopyright: |
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
 slotArticleEnd: |
-  本站总访问量<span id="busuanzi_value_site_pv"></span>次本站访客数<span id="busuanzi_value_site_uv"></span>人次本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  <div id="reads">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</div>
     
