@@ -35,15 +35,8 @@ future: true
 shiki:
   theme: github-dark
   line_number: true # whether to show the line_number
-syntax_highlighter: highlight.js
 highlight:
-  auto_detect: true
-  line_number: true
-  line_threshold: 0
-  tab_replace: ""
-  exclude_languages:
-    - example
-  wrap: true
+  enable: false
 prismjs:
   enable: false
 index_generator:
