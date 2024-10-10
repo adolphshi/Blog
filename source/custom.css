@@ -43,7 +43,7 @@
 max-height: 3000px;
 overflow: auto !important;
 }
-div#read{
+div#reads{
 background-color: var(--color-primary-bg);
 border-radius: 20px;
 padding: 10px 18px;
