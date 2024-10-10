@@ -40,6 +40,16 @@
   border-left: 10px solid rgb(231,76,60);
 }
 .spoiler.expanded .spoiler-content {
-  max-height: 3000px;
-  overflow: auto;
+max-height: 3000px;
+overflow: auto !important;
+}
+div#read{
+background-color: var(--color-primary-bg);
+border-radius: 20px;
+padding: 10px 18px;
+font-size: 14px;
+display: inline-block;
+margin-bottom: 10px;
+margin-right: 10px;
+text-decoration: none;
 }
