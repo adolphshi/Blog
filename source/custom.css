@@ -39,3 +39,7 @@
   background-image: linear-gradient(to right,#643530,#2b2b2b);
   border-left: 10px solid rgb(231,76,60);
 }
+.spoiler.expanded .spoiler-content {
+  max-height: 3000px;
+  overflow: auto;
+}
