@@ -3,8 +3,8 @@ title: 朋友们
 layout: py
 intro: "# 朋友们"
 ---
-
 ## 好van door ♂
+
 {% links shuffle %}
 [
  {
@@ -38,10 +38,22 @@ intro: "# 朋友们"
  }
 ]
 {% endlinks %}
+
 ## 虽然我们素未谋面
-现在还没有哦~
+
+{% links shuffle %}
+[
+ {
+  "title": "我是彩笔qwq",
+  "link": "blog.wsq127.top",
+  "img": "https://blog.wsq127.top/img/avatar.png",
+  "des": "qwq"
+ }
+]
+{% endlinks %}
 
 如果你想互换友链直接评论就可以了,最好使用这个格式(~~方便复制~~):
+
 ```
 {
   "title": "adolphshi",
