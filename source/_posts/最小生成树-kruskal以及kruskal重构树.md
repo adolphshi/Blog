@@ -72,7 +72,7 @@ kruskal重构树的建造就是在将原图进行kruskal的时候将合并的两
 #### 题意
 
 
-有 $n$ 个数 $a_i$,你每次可以选出两个数 $a_i$ 和 $a_j$,获得  分,并选择这两个数中的一个数删掉，求最大得分。
+有 $n$ 个数 $a_i$,你每次可以选出两个数 $a_i$ 和 $a_j$,获得$(a_i^{a_j}+a_j^{a_i})\bmod M$分,并选择这两个数中的一个数删掉，求最大得分。
 
 
 $1\leq n \leq 500$
@@ -81,7 +81,7 @@ $1\leq n \leq 500$
 #### 思路
 
 
-每次删一个点，每个点最多只能被删一次，如果我们将每一次删一个点中被删的点看作儿子，那么我们会发现最终的答案是一个树形结构．而儿子与父亲节点的连边为 因此我们想到两两连边，然后跑最大生成树即可．
+每次删一个点，每个点最多只能被删一次，如果我们将每一次删一个点中被删的点看作儿子，那么我们会发现最终的答案是一个树形结构．而儿子与父亲节点的连边为$(a_i^{a_j}+a_j^{a_i})\bmod M$因此我们想到两两连边，然后跑最大生成树即可．
 
 
 #### code
@@ -166,7 +166,7 @@ int main()
 ```
 
 
-{% end spoiler %}
+{% endspoiler %}
 
 
 ### CF1857G Counting Graphs
@@ -178,7 +178,7 @@ int main()
 #### 题意
 
 
-给定一个有个顶点的树，每个边有一个权值。
+给定一个有$n$个顶点的树，每个边有一个权值$w_i$。
 
 
 计算同时满足以下所有条件的带权图的数量：
@@ -301,7 +301,7 @@ int main()
 ```
 
 
-{% end spoiler %}
+{% endspoiler %}
 
 
 ### CF609E Minimum spanning tree for each edge
@@ -463,7 +463,7 @@ int main()
 ```
 
 
-{% end spoiler %}
+{% endspoiler %}
 
 
 ### P4768 \[NOI2018] 归程
@@ -683,7 +683,7 @@ int main()
 ```
 
 
-{% end spoiler %}
+{% endspoiler %}
 
 
 ### CF888G Xor-MST
@@ -806,7 +806,7 @@ int main()
 ```
 
 
-{% end spoiler %}
+{% endspoiler %}
 
 
 ### CF1706E Qpwoeirut and Vertices
@@ -929,7 +929,7 @@ int main()
 ```
 
 
-{% end spoiler %}
+{% endspoiler %}
 
 
 ### Flip Digits 2
@@ -1039,7 +1039,7 @@ int main()
 ```
 
 
-{% end spoiler %}
+{% endspoiler %}
 
 
 ### CF1120D Power Tree
@@ -1186,4 +1186,4 @@ int main()
 ```
 
 
-{% end spoiler %}
+{% endspoiler %}
