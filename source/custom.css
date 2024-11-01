@@ -1,0 +1,55 @@
+
+.nexmoe-post-footer
+{
+	background-color: #2b2b2b;
+}
+:root {
+    --color-primary: #31aeff;
+    --color2: #ff4e6a;
+    --color3: #ffb900;
+    --color4: #33d57a;
+    --color5: #00dbff;
+    --color6: #ff4500;
+    --color7: #9090ff;
+    --color-primary-bg: rgba(49, 174, 255,0.15);
+    --color2-bg: rgba(255, 78, 106,0.15);
+    --color3-bg: rgba(255, 185, 0,0.15);
+    --color4-bg: rgba(51,213,122,0.15);
+    --color5-bg: rgba(0,219,255,0.15);
+    --color6-bg: rgba(255, 69, 0,0.15);
+    --color7-bg: rgba(144,144,255,0.15);
+}
+.tips {
+  padding-left: 15px;
+  background-image: linear-gradient(to right,#2e4c60,#2b2b2b);
+  border-left: 10px solid rgb(52,152,219);
+}
+.success {
+  padding-left: 15px;
+  background-image: linear-gradient(to right,#2c5c40,#2b2b2b);
+  border-left: 10px solid rgb(46,204,113);
+}
+.warning {
+  padding-left: 15px;
+  background-image: linear-gradient(to right,#675922,#2b2b2b);
+  border-left: 10px solid rgb(241,196,15);
+}
+.danger {
+  padding-left: 15px;
+  background-image: linear-gradient(to right,#643530,#2b2b2b);
+  border-left: 10px solid rgb(231,76,60);
+}
+.spoiler.expanded .spoiler-content {
+max-height: 3000px;
+overflow: auto !important;
+}
+div#reads{
+background-color: var(--color-primary-bg);
+border-radius: 20px;
+padding: 10px 18px;
+font-size: 14px;
+display: inline-block;
+margin-bottom: 10px;
+margin-right: 10px;
+text-decoration: none;
+}
