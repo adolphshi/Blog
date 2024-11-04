@@ -101,7 +101,8 @@ copyTip: "著作权归作者所有。\n商业转载请联系作者获得授权�
 
 slotHead: | 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -138,8 +139,7 @@ slotCopyright: |
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
 slotArticleEnd: |
-    <span class="<%- url_for(post.path) %>" data-flag-title="<%= post.title %>">
-        <em class="post-meta-item-text">阅读量 </em>
-        <i class="leancloud-visitors-count">1000000</i>
-    </span>
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
     
