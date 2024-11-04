@@ -138,7 +138,7 @@ slotCopyright: |
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
 slotArticleEnd: |
-    <span id="<https://www.baidu.com>" class="leancloud_visitors" data-flag-title="Your Article Title">
+    <span id="Name" class="leancloud_visitors" data-flag-title="Your Article Title">
         <em class="post-meta-item-text">阅读量 </em>
         <i class="leancloud-visitors-count">1000000</i>
     </span>
