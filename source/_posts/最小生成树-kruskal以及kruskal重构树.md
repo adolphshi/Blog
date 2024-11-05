@@ -2,7 +2,7 @@
 layout: blog
 title: 最小生成树(kruskal以及kruskal重构树)
 date: 2024-10-30T14:58:00.000Z
-cover: https://cdn.luogu.com.cn/upload/image_hosting/imbnzgmv.png
+cover: https://cdn.luogu.com.cn/upload/image_hosting/kl5wx8q2.png
 coverWidth: "812"
 coverHeight: "460"
 tags:
