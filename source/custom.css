@@ -28,7 +28,7 @@
 }
 .success {
   padding-left: 15px;
-  background-image: linear-gradient(to right,#2ecc7170,#0000)
+  background-image: linear-gradient(to right,#2ecc7170,#0000);
   border-left: 10px solid rgb(46,204,113);
 }
 .warning {
