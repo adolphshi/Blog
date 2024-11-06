@@ -21,7 +21,7 @@ categories:
 ## kruskal最小生成树
 
 
-这个最小生成树本质就是一种贪心,每一次取边权最小的边,如果已经联通就不加,否则就让这两个连通块联通,用并查集维护.$n \leq m$.
+这个最小生成树本质就是一种贪心,每一次取边权最小的边,如果已经联通就不加,否则就让这两个连通块联通,用并查集维护.
 
 
 但是值得注意的是,因为它是个贪心,所以在处理的过程中也会有很多有用的性质,例如将当前两个连通块合并的边,一定是最小生成树上使两个连通块联通的最长的边.(其实这就很接近kruskal重构树的思想了)
@@ -36,7 +36,7 @@ categories:
 kruskal重构树的建造就是在将原图进行kruskal的时候将合并的两个点(或连通块)之间的边新建一个点,将两个点作为它的儿子.
 
 
-![](blob:https://adolphshi.netlify.app/d5545428-67c4-448a-8ab2-3be1e7b1a2c0)
+![](source/images/uploads/重构树.gif)
 
 
 其中红边为最小生成树的边,旁边的树就是kruskal重构树,方点为原先边上的点,圆点为原图的点.
@@ -85,10 +85,6 @@ $1\leq n \leq 500$
 
 
 #### code
-
-
-{% spoiler code %}
-
 
 ```cpp
 #include <bits/stdc++.h>
@@ -166,8 +162,6 @@ int main()
 ```
 
 
-{% endspoiler %}
-
 
 ### CF1857G Counting Graphs
 
@@ -221,9 +215,6 @@ $t$ 组数据，$1≤t≤10000,2≤∑n≤2×10^5,1≤S≤10^9,1≤w_i≤S$。
 
 
 #### code
-
-
-{% spoiler code %}
 
 
 ```cpp
@@ -299,10 +290,6 @@ int main()
 	return 0;
 }
 ```
-
-
-{% endspoiler %}
-
 
 ### CF609E Minimum spanning tree for each edge
 
@@ -382,8 +369,6 @@ $1≤C_i≤10^9,∀i≠j,C_i≠C_j$
 如果没有看懂的话就可以看代码:
 
 
-{% spoiler code %}
-
 
 ```cpp
 #include <bits/stdc++.h>
@@ -462,10 +447,6 @@ int main()
 }
 ```
 
-
-{% endspoiler %}
-
-
 ### P4768 \[NOI2018] 归程
 
 
@@ -510,10 +491,6 @@ Yazid 非常讨厌在雨天步行，因此他希望在完成回家这一目标�
 
 
 #### code
-
-
-{% spoiler code %}
-
 
 ```cpp
 #include <bits/stdc++.h>
@@ -683,8 +660,6 @@ int main()
 ```
 
 
-{% endspoiler %}
-
 
 ### CF888G Xor-MST
 
@@ -713,8 +688,6 @@ $1≤n≤2×10^5，0≤ai<2^{30}$
 #### code
 
 
-{% spoiler code %}
-
 
 ```cpp
 #include <bits/stdc++.h>
@@ -806,8 +779,6 @@ int main()
 ```
 
 
-{% endspoiler %}
-
 
 ### CF1706E Qpwoeirut and Vertices
 
@@ -818,7 +789,7 @@ int main()
 #### 题意
 
 
-给出 $n$ 个点， $m$ 条边的不带权连通无向图， $q$ 次询问至少要加完编号前多少的边，才能使得 $\[l,r]$ 中的所有点两两连通。
+给出 $n$ 个点， $m$ 条边的不带权连通无向图， $q$ 次询问至少要加完编号前多少的边，才能使得 $[l,r]$ 中的所有点两两连通。
 
 
 #### 思路
@@ -835,101 +806,111 @@ int main()
 
 思路不难,代码恶心.
 
-
-{% spoiler code %}
-
-
-```cpp
-#include <bits/stdc++.h>
+```cpp#include <bits/stdc++.h>
 #define _F(x,y,z) for(int x=y;x<=z;x++)
 #define F_(x,z,y) for(int x=z;x>=y;x--)
 #define TF(x,y,z) for(int x=head[y],z;x;x=nex[x])
 
-
 using namespace std;
-
 
 typedef long long ll;
 typedef double dou;
 typedef const int ci;
 typedef pair<int,int> pii;
 
+ci maxn=4e5+10;
 
-ci maxn=5e6+10;
-
-
-struct tire 
+int n,m,q,t,rt,tot,head[maxn],to[maxn],nex[maxn],lg[maxn],fa[maxn],f[25][maxn],st[25][maxn>>1];
+int dep[maxn];
+void add(int x,int y)
 {
-	int nex[3],dep;
-}nd[maxn];
-int n,a[maxn],cnt;
-ll ans=0,num;
-void insert(int x)
+	to[++tot]=y;
+	nex[tot]=head[x];
+	head[x]=tot;
+}
+int find(int x)
 {
-	int now=0;
-	nd[0].dep=31;
-	F_(i,30,0)
+	if(fa[x]==x)
+		return x;
+	return fa[x]=find(fa[x]);
+}
+void dfs(int x,int fa)
+{
+	f[0][x]=fa;dep[x]=dep[fa]+1;
+	_F(i,1,20) f[i][x]=f[i-1][f[i-1][x]];
+	TF(i,x,y)
 	{
-		int t=nd[now].dep;
-		if(!nd[now].nex[(x>>i)&1])
-			nd[now].nex[((x>>i)&1)]=++cnt;
-//		printf("%d %d %d %d\n",now,nd[now].nex[0],nd[now].nex[1],nd[now].dep);
-		now=nd[now].nex[((x>>i)&1)];
-		nd[now].dep=t-1;
+		y=to[i];
+		if(y!=fa)
+			dfs(y,x);
 	}
 }
-void get(int x,int y,ll res)
+int lca(int x,int y)
 {
-	if(res>num)
-		return ;
-	if(!nd[x].dep)
-	{
-		num=min(num,res);
-		return ;
-	}
-	_F(i,0,1)
-	{
-		if(nd[x].nex[i]&&nd[y].nex[i])
-			get(nd[x].nex[i],nd[y].nex[i],res);
-		else if(nd[x].nex[i^1]&&nd[y].nex[i])
-			get(nd[x].nex[i^1],nd[y].nex[i],res+(1<<nd[x].dep));
-	}
-}
-void dfs(int x)
-{
-//	printf("%d %d %d %d\n",x,nd[x].nex[0],nd[x].nex[1],nd[x].dep);
-	if(!nd[x].dep)
-		return ;
-	if(!nd[x].nex[0])
-	{
-		dfs(nd[x].nex[1]);
-		return ;
-	}
-	if(!nd[x].nex[1])
-	{
-		dfs(nd[x].nex[0]);
-		return ;
-	}
-	dfs(nd[x].nex[0]);
-	dfs(nd[x].nex[1]);
-	num=INT_MAX;
-	get(nd[x].nex[0],nd[x].nex[1],0);
-	ans+=num;
-	ans+=(1<<nd[x].dep);
+	if(dep[x]<dep[y])
+		swap(x,y);
+	F_(i,20,0)
+		if(dep[f[i][x]]>=dep[y])
+			x=f[i][x];
+	if(x==y)
+		return x;
+	F_(i,20,0)
+		if(f[i][x]!=f[i][y])
+			x=f[i][x],y=f[i][y];
+	return f[0][x];
 }
 int main()
 {
-	scanf("%d",&n);
-	_F(i,1,n)
-		scanf("%d",&a[i]),insert(a[i]);
-	dfs(0);
-	printf("%lld",ans/2);
+	scanf("%d",&t);
+	lg[0]=-1;
+	_F(i,1,114514)
+		lg[i]=lg[i>>1]+1;
+	while(t--)
+	{
+		tot=0;
+		memset(head,0,sizeof head);
+		scanf("%d%d%d",&n,&m,&q);
+		_F(i,1,n+m)
+			fa[i]=i;
+		_F(i,1,m)
+		{
+			int x,y;
+			scanf("%d%d",&x,&y);
+			int fx=find(x),fy=find(y);
+			if(fx==fy)continue;
+			add(fx,n+i),add(i+n,fx);
+			add(fy,n+i),add(i+n,fy);
+			fa[fx]=i+n,fa[fy]=i+n;rt=i+n;
+		}
+		dfs(rt,0);
+//		printf("%d",rt);
+		_F(i,1,n-1)
+			st[0][i]=lca(i,i+1);
+		for(int i=1;(1<<i)<=n-1;i++)
+		{
+			for(int j=1;j+(1<<i)-1<=n-1;j++)
+				st[i][j]=max(st[i-1][j],st[i-1][j+(1<<(i-1))]);
+//			puts("");
+		}
+		_F(i,1,q)
+		{
+			int l,r;
+			scanf("%d%d",&l,&r);
+			if(l==r)
+			{
+				printf("0 ");
+				continue;
+			}
+			r--;
+			int len=lg[r-l+1];
+			printf("%d ",max(st[len][l],st[len][r-(1<<len)+1])-n);
+		}
+		puts("");
+	}
 	return 0;
 }
 ```
 
-
-{% endspoiler %}
 
 
 ### Flip Digits 2
@@ -941,13 +922,12 @@ int main()
 #### 题意
 
 
-E869120 您有一个长度为 $N$ 的01序列 $S$ 。最初， $S$ 中的所有字符都是 "0"。
+您有一个长度为 $N$ 的01序列 $S$ 。最初， $S$ 中的所有字符都是 "0"。
 
 
-ABC 商店出售 $M$ 件商品，每件商品的编号从 $1$ 到 $M$ 。商品 $i$ 的价格为 $C_i$ ，这与 $S$ 中的 $L_i$ 至 $R_i$ 字符取反。
+商店出售 $M$ 件商品，每件商品的编号从 $1$ 到 $M$ 。商品 $i$ 的价格为 $C_i$ ，这可以使 $S$ 中的 $L_i$ 至 $R_i$ 数字取反。
 
-
-E869120 你想从 $M$ 中选择一些物品购买，以满足可以通过你买的物品构造出长度为$N$所有01串.
+你想从 $M$ 中选择一些物品购买，以满足可以通过你买的物品构造出长度为$N$所有01串.
 
 
 求满足条件所需买的物品的最低总价。
@@ -967,8 +947,6 @@ E869120 你想从 $M$ 中选择一些物品购买，以满足可以通过你买�
 
 #### code
 
-
-{% spoiler code %}
 
 
 ```cpp
@@ -1039,8 +1017,6 @@ int main()
 ```
 
 
-{% endspoiler %}
-
 
 ### CF1120D Power Tree
 
@@ -1062,18 +1038,21 @@ int main()
 
 $n≤2×10^5$
 
-
 #### 思路
 
 
 大致与上题类似,只不过需要先用dfs序将树上问题,转为区间问题,然后就跟上题一样了.
 
+::: success 
+
+#### extend
+
+树上问题可以与序列问题相互转换,将树上问题转成序列问题用dfs序(或欧拉序),将序列问题转为树上问题使用笛卡尔树.
+
+:::
+
 
 #### code
-
-
-{% spoiler code %}
-
 
 ```cpp
 #include <bits/stdc++.h>
@@ -1184,6 +1163,3 @@ int main()
 	return 0;
 }
 ```
-
-
-{% endspoiler %}
