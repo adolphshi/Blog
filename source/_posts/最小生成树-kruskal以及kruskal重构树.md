@@ -36,7 +36,7 @@ categories:
 kruskal重构树的建造就是在将原图进行kruskal的时候将合并的两个点(或连通块)之间的边新建一个点,将两个点作为它的儿子.
 
 
-![](images/uploads/重构树.gif)
+![](/images/uploads/重构树.gif)
 
 
 其中红边为最小生成树的边,旁边的树就是kruskal重构树,方点为原先边上的点,圆点为原图的点.
