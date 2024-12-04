@@ -3,8 +3,8 @@ layout: blog
 title: Codeforces Round 974 一句话题解
 date: 2024-12-04T18:58:00.000Z
 cover: https://adolphshi.netlify.app/images/uploads/snipaste_2024-09-19_19-28-52.png
-coverWidth: "812"
-coverHeight: "460"
+coverWidth: 1038
+coverHeight: 200
 tags:
   - OI
   - VP
