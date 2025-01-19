@@ -15,7 +15,7 @@ CF2014.[Codeforces Round 974 (Div. 3)](https://codeforces.com/contest/2014) solv
 
 这篇是一个简要题解,只有题解,不保证能看懂.
 
-<!---more--->
+<!--more-->
 
 ## A. Robin Helps
 
