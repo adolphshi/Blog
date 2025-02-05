@@ -39,6 +39,6 @@
     "markdown-it-mark": "^4.0.0"
   },
   "devDependencies": {
-    "shiki": "^1.12.1"
+    "shiki": "^2.3.1"
   }
 }
