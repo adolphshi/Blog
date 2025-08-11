@@ -6,7 +6,7 @@ intro: "# 朋友们"
 ## 好van door ♂
 
 {% links shuffle %}
-[
+\[
  {
   "title": "异次元之旅",
   "link": "https://travel.moe/go.html",
@@ -19,7 +19,7 @@ intro: "# 朋友们"
 ## 芝士我的动物朋友们(
 
 {% links shuffle %}
-[
+\[
  {
   "title": "dolphin613",
   "link": "https://dolphin613.netlify.app",
@@ -29,7 +29,7 @@ intro: "# 朋友们"
 ]
 {% endlinks %}
 {% links shuffle %}
-[
+\[
  {
   "title": "Zhoumouren",
   "link": "https://blog.517group.cn/",
@@ -42,7 +42,7 @@ intro: "# 朋友们"
 ## 虽然我们素未谋面
 
 {% links shuffle %}
-[
+\[
  {
   "title": "我是彩笔qwq",
   "link": "blog.wsq127.top",
@@ -51,6 +51,20 @@ intro: "# 朋友们"
  }
 ]
 {% endlinks %}
+
+
+{% links shuffle %}
+[
+ {
+  "title": "思睿Sirui",
+  "link": "https://siruis.top",
+  "img": "https://siruis.top/avatar.webp",
+  "des": "思睿Sirui"
+ }
+]
+{% endlinks %}
+
+
 
 如果你想互换友链直接评论就可以了,最好使用这个格式(~~方便复制~~):
 
