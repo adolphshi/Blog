@@ -5,6 +5,7 @@ intro: "# 朋友们"
 ---
 ## 好van door ♂
 
+
 {% links shuffle %}
 \[
  {
@@ -28,6 +29,8 @@ intro: "# 朋友们"
  }
 ]
 {% endlinks %}
+
+
 {% links shuffle %}
 \[
  {
@@ -52,9 +55,8 @@ intro: "# 朋友们"
 ]
 {% endlinks %}
 
-
 {% links shuffle %}
-[
+\[
  {
   "title": "思睿Sirui",
   "link": "https://siruis.top",
@@ -63,8 +65,6 @@ intro: "# 朋友们"
  }
 ]
 {% endlinks %}
-
-
 
 如果你想互换友链直接评论就可以了,最好使用这个格式(~~方便复制~~):
 
