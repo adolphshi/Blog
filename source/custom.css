@@ -45,3 +45,30 @@
 max-height: 3000px;
 overflow: auto !important;
 }
+/* 让列表中的公式自动换行 */
+.post-content li .MathJax,
+.post-content li .MathJax_Display,
+.post-content li mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 对于行间公式（独立成行的公式） */
+.post-content li .MathJax_Display {
+  display: block !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+/* 通用方案：让所有列表内的数学内容可滚动 */
+.post-content li {
+  overflow-x: auto;
+}
+
+/* 或者只针对包含数学公式的列表项 */
+.post-content li:has(.MathJax, mjx-container) {
+  overflow-x: auto;
+}
